@@ -11,7 +11,14 @@ const BlogLink = styled(Link)`
 
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
-  color: blue;
+  color: #0f4d7a;
+`
+
+const A = styled.a`
+  color: black;
+  &:visited {
+    color: #123123;
+  }
 `
 
 export default ({ data }) => {
@@ -20,7 +27,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div>
-        <h1>Andrew's Thoughts</h1>
+        <h1>Blog Entries</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
@@ -32,7 +39,9 @@ export default ({ data }) => {
           </div>
         ))}
       </div>
-      <Link to="/page-3/">Go to page 2</Link>
+      <A href="https://andrewwd1.github.io">
+        Go to https://andrewwd1.github.io
+      </A>
     </Layout>
   )
 }
