@@ -19,7 +19,7 @@ const HeaderH1 = styled.h1`
 `
 
 const HeaderLink = styled(Link)`
-  color: rgba(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
 `
 
