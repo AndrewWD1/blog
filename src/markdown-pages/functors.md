@@ -1,5 +1,5 @@
 ---
-title: "Array as a Functors"
+title: "Array as a Functor"
 date: "2019-12-27"
 ---
 
@@ -23,6 +23,14 @@ with no hope of tying the concept back to it's mathematical roots.
 
 I hope to elucidate how to come to terms with both the mathematical idea of functors and the programming idea of functors.
 Hopefully by the end you will understood why the term is used. Additionally, you should understand why an instance of an array is'nt really a functor, why a functor is not just a thing that can be mapped over, and how it actually is best to coceptualize functors as a type of function.
+
+The key point will be that **Array is a functor**.
+This is because Array is a mapping between categories that obeys certain rules. Notice that I did not say array**s** are functors.
+I am refering to here the "Generic" that takes a type T and returns a new type Array\<T>.
+Array maps between the Category of Types and itself.
+This is the main thrust of the article.
+So, if you have experience with the subject hopefully this is enough to elucidate the understanding.
+If not, we will dive in further in the folowwing paragraphs.
 
 First, we will dive into the deep end of pure math to discover how mathematicians think of functors.
 
