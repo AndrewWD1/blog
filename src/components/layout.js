@@ -14,9 +14,12 @@ const ContentWrapper = styled.div`
 `
 
 const A = styled.a`
-  color: black;
+  color: #0f4d7a;
   &:visited {
-    color: #123123;
+    color: #0f4d7a;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 `
 
@@ -37,9 +40,11 @@ const Layout = ({ children }) => {
       <ContentWrapper>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <A href="https://www.gatsbyjs.org">Gatsby</A>
+          <div>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <A href="https://www.gatsbyjs.org">Gatsby</A>
+          </div>
         </footer>
       </ContentWrapper>
     </>

@@ -15,9 +15,12 @@ const BlogTitle = styled.h3`
 `
 
 const A = styled.a`
-  color: black;
+  color: #0f4d7a;
   &:visited {
-    color: #123123;
+    color: #0f4d7a;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 `
 
@@ -39,9 +42,8 @@ export default ({ data }) => {
           </div>
         ))}
       </div>
-      <A href="https://andrewwd1.github.io">
-        Go to https://andrewwd1.github.io
-      </A>
+      Go to my homepage at{" "}
+      <A href="https://andrewwd1.github.io">https://andrewwd1.github.io</A>
     </Layout>
   )
 }

@@ -12,6 +12,7 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <div>Get in touch with the author at andrew.doumont@gmail.com</div>
     </Layout>
   )
 }
