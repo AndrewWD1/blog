@@ -16,6 +16,8 @@ We will primarily look at Array, which is what is typically used to showcase thi
 Hopefully by the end you will understood why the term is used, and will be able to fill in details yourself.
 You should understand why an instance of an array isn't really a functor, how it is actually best to conceptualize functors as a type of function, and be able to look at the functor rules on wikipedia and see how they apply.
 
+![a](../images/diagram.png)
+
 The key point will be that **Array is a functor**.
 This is because Array is a mapping between categories that obeys certain rules. Notice that I did not say array**s** are functors.
 I am refering to here the "Generic" that takes a type **T** and returns a new type **Array\<T>**.
@@ -42,6 +44,6 @@ They are "functions" between Categories.
 They take an object in one Category and give you an object in another Category.
 Equally importantly, if you have a function between two objects in your first category, you also get a function between the objects in your new category.
 
-Now, lets examine why Array is a functor. Array takes a type from your Category of types and returns you a new type in the Category of types. 
+Now, lets examine why Array is a functor. Array takes a type from your Category of types and returns you a new type in the Category of types.
 
 Taking a break, I will be back to finish soon!
