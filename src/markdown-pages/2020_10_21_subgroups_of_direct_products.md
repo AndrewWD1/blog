@@ -1,6 +1,6 @@
 ---
 title: "Subgroups of Direct Products"
-date: "2020-10-18"
+date: "2020-10-21"
 ---
 
 Subgroups of direct products are not so easily characterized as one might expect on first guess. 
