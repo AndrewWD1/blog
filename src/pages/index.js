@@ -43,7 +43,7 @@ export default ({ data }) => {
         ))}
       </div>
       Go to my homepage at{" "}
-      <A href="https://andrewwd1.github.io">https://andrewwd1.github.io</A>
+      <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
     </Layout>
   )
 }
