@@ -2,7 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { DiscussionEmbed } from "disqus-react"
+import styled from "styled-components"
 require(`katex/dist/katex.min.css`)
+
+const StyledDiscussionEmbed = styled(DiscussionEmbed)`
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+
+  iframe {
+    margin-bottom: 0px;
+  }
+`
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -22,14 +33,7 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       <h2>Comments</h2>
-      <DiscussionEmbed
-        style={{
-          border: "1px solid black",
-          borderRadius: "5px",
-          padding: "0.5rem 1rem 0rem 1rem",
-        }}
-        {...disqusConfig}
-      />
+      <StyledDiscussionEmbed {...disqusConfig} />
       <div>Get in touch with the author at andrew.doumont@gmail.com</div>
     </Layout>
   )
