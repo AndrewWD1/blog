@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+//Code Syntax highlighting themese found at https://github.com/PrismJS/prism-themes
+require("prismjs/themes/prism-tomorrow.css")
