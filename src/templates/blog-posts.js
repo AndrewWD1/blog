@@ -13,6 +13,10 @@ const StyledDiscussionEmbed = styled(DiscussionEmbed)`
   iframe {
     margin-bottom: 0px;
   }
+
+  .footer {
+    color: red;
+  }
 `
 
 export default ({ data }) => {
@@ -25,6 +29,8 @@ export default ({ data }) => {
       title: post.frontmatter.title,
     },
   }
+
+  const myExtScript = require("../scripts/blogPostScript")
 
   return (
     <Layout>
