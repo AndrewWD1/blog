@@ -19,6 +19,11 @@ const StyledDiscussionEmbed = styled(DiscussionEmbed)`
   }
 `
 
+const StyledH2 = styled.h2`
+  margin-top: 4rem;
+  border-top: 1px solid black;
+`
+
 export default ({ data }) => {
   const post = data.markdownRemark
 
@@ -30,7 +35,7 @@ export default ({ data }) => {
     },
   }
 
-  const myExtScript = require("../scripts/blogPostScript")
+  // const myExtScript = require("../scripts/blogPostScript")
 
   return (
     <Layout>
@@ -38,7 +43,7 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <h2>Comments</h2>
+      <StyledH2>Comments</StyledH2>
       <StyledDiscussionEmbed {...disqusConfig} />
       <div>Get in touch with the author at andrew.doumont@gmail.com</div>
     </Layout>
