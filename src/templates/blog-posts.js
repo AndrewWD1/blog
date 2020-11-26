@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { DiscussionEmbed } from "disqus-react"
 import styled from "styled-components"
@@ -13,19 +12,22 @@ const StyledDiscussionEmbed = styled(DiscussionEmbed)`
   iframe {
     margin-bottom: 0px;
   }
+`
 
-  .footer {
-    color: red;
-  }
+const OtherArticles = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
 `
 
 const StyledH2 = styled.h2`
-  margin-top: 4rem;
   border-top: 1px solid black;
 `
 
-export default ({ data }) => {
-  const post = data.markdownRemark
+export default ({ pageContext }) => {
+  const post = pageContext
+  console.log(pageContext)
 
   const disqusConfig = {
     shortname: "andrewdoumont",
@@ -43,20 +45,23 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <OtherArticles>
+        {post.previous && (
+          <a href={post.previous.fields.slug}>
+            &#8592;
+            {` ${post.previous.frontmatter.title}`}
+          </a>
+        )}
+        {post.next && (
+          <a href={post.next.fields.slug}>
+            {`${post.next.frontmatter.title} `}
+            &#8594;
+          </a>
+        )}
+      </OtherArticles>
       <StyledH2>Comments</StyledH2>
       <StyledDiscussionEmbed {...disqusConfig} />
       <div>Get in touch with the author at andrew.doumont@gmail.com</div>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`
