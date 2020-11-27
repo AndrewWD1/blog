@@ -30,6 +30,15 @@ const A = styled.a`
   }
 `
 
+const OtherPages = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: #0f4d7a;
+  }
+`
+
 export default ({ data, currentPage, numPages }) => {
   if (!numPages) numPages = 2
   return (
@@ -47,13 +56,13 @@ export default ({ data, currentPage, numPages }) => {
           </div>
         ))}
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <OtherPages>
         {currentPage !== 1 && <a href={`/${currentPage - 1}`}>Previous Page</a>}
         <div></div>
         {numPages > currentPage ? (
           <a href={`/${currentPage + 1}`}>Next Page</a>
         ) : null}
-      </div>
+      </OtherPages>
       Visit my homepage at{" "}
       <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
     </Layout>

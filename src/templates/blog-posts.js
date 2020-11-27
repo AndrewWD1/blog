@@ -20,7 +20,7 @@ const OtherArticles = styled.div`
   margin-top: 4rem;
   margin-bottom: 0.5rem;
   a {
-    color: black;
+    color: #0f4d7a;
 
     &:hover {
       text-decoration: underline;
