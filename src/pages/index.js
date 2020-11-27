@@ -40,8 +40,8 @@ export default ({ data }) => {
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
               <BlogTitle>{node.frontmatter.title}</BlogTitle>
-              <BlogDate>{node.frontmatter.date}</BlogDate>
             </BlogLink>
+            <BlogDate>{node.frontmatter.date}</BlogDate>
             <p>{node.excerpt}</p>
           </div>
         ))}
