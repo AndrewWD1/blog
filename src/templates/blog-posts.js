@@ -26,10 +26,6 @@ const OtherArticles = styled.div`
       text-decoration: underline;
     }
   }
-  .otherarticles-left {
-  }
-  .otherarticles-right {
-  }
 `
 
 const StyledH2 = styled.h2`
