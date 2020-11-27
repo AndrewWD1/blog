@@ -39,6 +39,10 @@ const OtherPages = styled.div`
   }
 `
 
+const Footer = styled.footer`
+  border-top: 1px solid black;
+`
+
 export default ({ data, currentPage, numPages }) => {
   if (!numPages) numPages = 2
   return (
@@ -57,14 +61,18 @@ export default ({ data, currentPage, numPages }) => {
         ))}
       </div>
       <OtherPages>
-        {currentPage !== 1 && <a href={`/${currentPage - 1}`}>Previous Page</a>}
+        {currentPage !== 1 && (
+          <a href={`/${currentPage - 1}`}>&#8592; Previous Page</a>
+        )}
         <div></div>
         {numPages > currentPage ? (
           <a href={`/${currentPage + 1}`}>Next Page &#8594;</a>
         ) : null}
       </OtherPages>
-      Visit my homepage at{" "}
-      <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
+      <Footer>
+        Visit my homepage at{" "}
+        <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
+      </Footer>
     </Layout>
   )
 }

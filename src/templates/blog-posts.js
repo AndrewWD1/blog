@@ -32,6 +32,12 @@ const StyledH2 = styled.h2`
   border-top: 1px solid black;
 `
 
+const A = styled.a`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`
+
 export default ({ pageContext }) => {
   const post = pageContext
 
@@ -53,17 +59,19 @@ export default ({ pageContext }) => {
       </div>
       <OtherArticles>
         {post.next && (
-          <a className="otherarticles-right" href={post.next.fields.slug}>
+          <A href={post.next.fields.slug}>
             &#8592;
             {`${post.next.frontmatter.title}`}
-          </a>
+          </A>
         )}
         <div></div>
         {post.previous && (
-          <a className="otherarticles-left" href={post.previous.fields.slug}>
-            {`${post.previous.frontmatter.title}`}
+          <div>
+            <A href={post.previous.fields.slug}>
+              {`${post.previous.frontmatter.title}`}
+            </A>
             &#8594;
-          </a>
+          </div>
         )}
       </OtherArticles>
       <StyledH2>Comments</StyledH2>
