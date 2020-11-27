@@ -1,55 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const BlogLink = styled(Link)`
-  text-decoration: none;
-`
-
-const BlogTitle = styled.h3`
-  color: #0f4d7a;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-`
-
-const BlogDate = styled.div`
-  margin: 0px;
-  font-size: 0.8rem;
-`
-
-const A = styled.a`
-  color: #0f4d7a;
-  &:visited {
-    color: #0f4d7a;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-`
+import { graphql } from "gatsby"
+import BlogListLayout from "../components/pagelayout/blog-list-layout"
 
 export default ({ data }) => {
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <div>
-        <h1>Blog Entries</h1>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <BlogLink to={node.fields.slug}>
-              <BlogTitle>{node.frontmatter.title}</BlogTitle>
-            </BlogLink>
-            <BlogDate>{node.frontmatter.date}</BlogDate>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
-      </div>
-      Go to my homepage at{" "}
-      <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
-    </Layout>
-  )
+  return <BlogListLayout data={data} currentPage={1} />
 }
 
 export const query = graphql`

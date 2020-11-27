@@ -55,13 +55,13 @@ export default ({ pageContext }) => {
         {post.previous && (
           <a className="otherarticles-left" href={post.previous.fields.slug}>
             &#8592;
-            {` ${post.previous.frontmatter.title}`}
+            {`${post.previous.frontmatter.title}`}
           </a>
         )}
         <div></div>
         {post.next && (
           <a className="otherarticles-right" href={post.next.fields.slug}>
-            {`${post.next.frontmatter.title} `}
+            {`${post.next.frontmatter.title}`}
             &#8594;
           </a>
         )}

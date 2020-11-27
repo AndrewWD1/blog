@@ -14,9 +14,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -48,19 +48,36 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog-posts.js`),
-        context: {
-          slug: node.fields.slug,
-          frontmatter: node.frontmatter,
-          html: node.html,
-          next,
-          previous,
-        },
-      })
+  `)
+
+  result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/blog-posts.js`),
+      context: {
+        slug: node.fields.slug,
+        frontmatter: node.frontmatter,
+        html: node.html,
+        next,
+        previous,
+      },
+    })
+  })
+
+  // Create blog-list pages other than first
+  const posts = result.data.allMarkdownRemark.edges
+  const postsPerPage = 3
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: `/${i + 1}`,
+      component: path.resolve("./src/templates/blog-list.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
     })
   })
 }
