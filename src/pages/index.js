@@ -10,8 +10,14 @@ const BlogLink = styled(Link)`
 `
 
 const BlogTitle = styled.h3`
-  margin-bottom: 20px;
   color: #0f4d7a;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+`
+
+const BlogDate = styled.div`
+  margin: 0px;
+  font-size: 0.8rem;
 `
 
 const A = styled.a`
@@ -33,9 +39,8 @@ export default ({ data }) => {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
-              <BlogTitle>
-                {node.frontmatter.title} - {node.frontmatter.date}
-              </BlogTitle>
+              <BlogTitle>{node.frontmatter.title}</BlogTitle>
+              <BlogDate>{node.frontmatter.date}</BlogDate>
             </BlogLink>
             <p>{node.excerpt}</p>
           </div>
