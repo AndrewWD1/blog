@@ -52,16 +52,16 @@ export default ({ pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       <OtherArticles>
-        {post.previous && (
-          <a className="otherarticles-left" href={post.previous.fields.slug}>
+        {post.next && (
+          <a className="otherarticles-right" href={post.next.fields.slug}>
             &#8592;
-            {`${post.previous.frontmatter.title}`}
+            {`${post.next.frontmatter.title}`}
           </a>
         )}
         <div></div>
-        {post.next && (
-          <a className="otherarticles-right" href={post.next.fields.slug}>
-            {`${post.next.frontmatter.title}`}
+        {post.previous && (
+          <a className="otherarticles-left" href={post.previous.fields.slug}>
+            {`${post.previous.frontmatter.title}`}
             &#8594;
           </a>
         )}
