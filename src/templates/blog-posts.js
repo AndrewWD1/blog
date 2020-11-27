@@ -19,6 +19,17 @@ const OtherArticles = styled.div`
   justify-content: space-between;
   margin-top: 4rem;
   margin-bottom: 0.5rem;
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .otherarticles-left {
+  }
+  .otherarticles-right {
+  }
 `
 
 const StyledH2 = styled.h2`
@@ -27,7 +38,6 @@ const StyledH2 = styled.h2`
 
 export default ({ pageContext }) => {
   const post = pageContext
-  console.log(pageContext)
 
   const disqusConfig = {
     shortname: "andrewdoumont",
@@ -47,13 +57,14 @@ export default ({ pageContext }) => {
       </div>
       <OtherArticles>
         {post.previous && (
-          <a href={post.previous.fields.slug}>
+          <a className="otherarticles-left" href={post.previous.fields.slug}>
             &#8592;
             {` ${post.previous.frontmatter.title}`}
           </a>
         )}
+        <div></div>
         {post.next && (
-          <a href={post.next.fields.slug}>
+          <a className="otherarticles-right" href={post.next.fields.slug}>
             {`${post.next.frontmatter.title} `}
             &#8594;
           </a>
@@ -61,7 +72,6 @@ export default ({ pageContext }) => {
       </OtherArticles>
       <StyledH2>Comments</StyledH2>
       <StyledDiscussionEmbed {...disqusConfig} />
-      <div>Get in touch with the author at andrew.doumont@gmail.com</div>
     </Layout>
   )
 }

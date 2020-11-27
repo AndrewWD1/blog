@@ -25,7 +25,6 @@ const A = styled.a`
 `
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
