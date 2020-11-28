@@ -3,7 +3,7 @@ title: "Winter Stoke"
 date: "2020-11-25"
 ---
 
-### Why it is nearly impossible to complete School work at the moment
+### Why it is nearly impossible to complete school work at the moment
 
 It has become progressively harder to accomplish any sort of school work as we draw nearer to winter and another ski season is afoot. This is of course an awful time to lose motivation as quite a bit of theory has been developed now in the classes I am taking, and so the tests and problem sets having gotten proportionately more difficult.
 
