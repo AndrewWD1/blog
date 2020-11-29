@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog-list pages other than first
   const posts = result.data.allMarkdownRemark.edges
-  const postsPerPage = 3
+  const postsPerPage = 4
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

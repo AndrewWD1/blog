@@ -50,8 +50,8 @@ export default ({ data, currentPage, numPages }) => {
     <Layout>
       <SEO title="Home" />
       <div>
-        <h1>Blog Entries</h1>
-        {data.allMarkdownRemark.edges.slice(0, 3).map(({ node }) => (
+        {/* <h1>Blog Entries</h1> */}
+        {data.allMarkdownRemark.edges.slice(0, 4).map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
               <BlogTitle>{node.frontmatter.title}</BlogTitle>
