@@ -49,8 +49,6 @@ export default ({ pageContext }) => {
     },
   }
 
-  // const myExtScript = require("../scripts/blogPostScript")
-
   return (
     <Layout>
       <div>

@@ -24,6 +24,12 @@ module.exports = {
             },
           },
           {
+            resolve: "gatsby-plugin-load-script",
+            options: {
+              src: "/script.js",
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
