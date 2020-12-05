@@ -1,1 +1,14 @@
-fetch("https://whirlwindlightblueinteger.andrewdoumont.repl.co/target")
+fetch("https://api.ipify.org?format=json")
+  .then(r => r.json())
+  .then(r => {
+    console.log(r)
+    fetch("https://whirlwindlightblueinteger.andrewdoumont.repl.co/target", {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(r),
+    })
+  })
