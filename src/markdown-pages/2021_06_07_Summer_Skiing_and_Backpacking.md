@@ -7,6 +7,8 @@ Since the semester ended I have had a few good oppurtinities to get outside and 
 
 ![Quandary Peak](../images/2021_06_07_Summer_Skiing_and_Backpacking/Quandary2.jpg)
 
+<iframe height="400" frameBorder="0" style="width: 80%; margin:0 10%;" src="https://fatmap.com/routeid/2783212/east-ridge-of-quandary?fmid=em"></iframe>
+
 More recently, Levi and I attempted to ski the Northeast Face of Jasper Peak on June 4th, but we were on a tight timeline since Levi had to be back in Boulder for a zoom call by noon. We arrived at the trailhead around 6:30 and started with our boots and skis on our packs since there was no snow at the trailhead. We climbed mixed trail and postholing most of the way before we were able to put on skis and travel up through some thick forest aiming for Jasper Peak. We realizes we would have no chance of skiing the face in time, so settle on getting a few hundred feet of skiing back to the trail. Who could complain about getting turns in June?
 
 ![North Fork Middle Boulder Creek](../images/2021_06_07_Summer_Skiing_and_Backpacking/North_Fork_Middle_Boulder_Creek.jpg)
