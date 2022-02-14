@@ -72,7 +72,9 @@ export default ({ data, currentPage, numPages }) => {
       </OtherPages>
       <Footer>
         Visit my homepage at{" "}
-        <A href="https://andrewdoumont.com">https://andrewdoumont.com</A>
+        <A href="https://andrew-doumont.netlify.app">
+          https://andrew-doumont.netlify.app
+        </A>
       </Footer>
     </Layout>
   )
