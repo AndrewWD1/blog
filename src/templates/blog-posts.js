@@ -1,18 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
-import { DiscussionEmbed } from "disqus-react"
 import styled from "styled-components"
 require(`katex/dist/katex.min.css`)
-
-const StyledDiscussionEmbed = styled(DiscussionEmbed)`
-  border: 1px solid black;
-  border-radius: 8px;
-  padding: 0rem 0.5rem 0rem 0.5rem;
-
-  iframe {
-    margin-bottom: 0px;
-  }
-`
 
 const OtherArticles = styled.div`
   display: flex;
@@ -41,14 +30,6 @@ const A = styled.a`
 export default ({ pageContext }) => {
   const post = pageContext
 
-  const disqusConfig = {
-    shortname: "andrewdoumont",
-    config: {
-      identifier: post.frontmatter.title,
-      title: post.frontmatter.title,
-    },
-  }
-
   return (
     <Layout>
       <div>
@@ -72,8 +53,7 @@ export default ({ pageContext }) => {
           </div>
         )}
       </OtherArticles>
-      <StyledH2>Comments</StyledH2>
-      <StyledDiscussionEmbed {...disqusConfig} />
+      <StyledH2></StyledH2>
     </Layout>
   )
 }
