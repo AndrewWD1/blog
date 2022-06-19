@@ -1,6 +1,6 @@
 ---
 title: "Sylow's Theorems"
-date: "2020-11-13"
+date: "2021-11-13"
 ---
 
 ### Critical theorems for understanding and classifying finite groups
