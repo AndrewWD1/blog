@@ -56,8 +56,6 @@ Went up to Berthoud pass with the plan to just do a training day but the snow tu
 
 Incredibly stoked to watch Sierra boot up and slay her way down Willie's Wide on the East Wall of A Basin. Even better is we got to do it twice. Even better, the line had about 5 inches of soft wind-buff snow on top. Really fun skiing.
 
-![](../images/2022_04_30_April_2022/IMG_9353.jpg)
-
 ## Arapahoe Lakes Trees and Rayback, 3 Apr
 
 On Sunday, Levi and I got out with a tentative plan to ski Frosty Mountain in the James Peak Wilderness. Southern aspects had been looking good in terms of having a stability, minus wind slabs and wet slabs. It was forecasted to be overcast and cold that day though, so we figured wet slabs wouldn't factor in. Wind slabs could still have presented a concern though. However, we decided not ski Frosty mainly based on wind conditions since we didn't want to be above treeline in such windy conditions. So, we got 4 laps in the trees below Arapahoe Lakes.
